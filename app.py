@@ -4,7 +4,7 @@ Code for GSTR 410 website
 This is designed as a fairly simple website that will serve as essentially as
 an online informational pamphlet. It will include my research in a different
 format. It is coded in python using the Flask library. Bootstrap 4 is also
-utilized to organize the individual pages. 
+utilized to organize the individual pages.
 
 Special thanks to:
 Dr. Deborah Martin
@@ -35,25 +35,20 @@ def esports():
 def streamers():
     return render_template("streamers.html")
 
-@app.route("/champions")
+@app.route("/ingame")
 def champions():
-    return render_template("champions.html")
+    return render_template("ingame.html")
 
-@app.route("/cosmetics")
-def cosmetics():
-    return render_template("cosmetics.html")
 
 #concerns the recent lawsuit filed against Riot Games for
 #gender discrimination in the workplace
-@app.route("/lawsuit")
+@app.route("/controversy")
 def lawsuit():
-    return render_template("lawsuit.html")
+    return render_template("controversy.html")
 
 #concerns the private arbitrations that some were forced into and the
 #resulting strike
-@app.route("/arbitration")
-def arbitration():
-    return render_template("arbitration.html")
+
 
 if __name__ == '__main__':
     app.run(debug=True)
